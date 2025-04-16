@@ -140,16 +140,20 @@ Ejercicios
 - Etiquete manualmente los segmentos de voz y silencio del fichero grabado al efecto. Inserte, a 
   continuación, una captura de `wavesurfer` en la que se vea con claridad la señal temporal, el contorno de
   potencia y la tasa de cruces por cero, junto con el etiquetado manual de los segmentos.
+![image](https://github.com/user-attachments/assets/b36b4810-1874-45a0-8545-8a7b22cdf927)
 
 
 - A la vista de la gráfica, indique qué valores considera adecuados para las magnitudes siguientes:
 
 	* Incremento del nivel potencia en dB, respecto al nivel correspondiente al silencio inicial, para
-	  estar seguros de que un segmento de señal se corresponde con voz.
+	  estar seguros de que un segmento de señal se corresponde con voz.  
+   	  Un incremento de +5 dB aproximadamente sobre el nivel de silencio sirve como umbral fiable para distinguir voz (que siempre supera este valor).
 
-	* Duración mínima razonable de los segmentos de voz y silencio.
+	* Duración mínima razonable de los segmentos de voz y silencio.  
+	  La duración mínima razonable de los segmentos de voz es de unos 600-700ms, para los segmentos de silencio ajustamos la duración a unos 200-300 ms.
 
-	* ¿Es capaz de sacar alguna conclusión a partir de la evolución de la tasa de cruces por cero?
+	* ¿Es capaz de sacar alguna conclusión a partir de la evolución de la tasa de cruces por cero?  
+	  Nos ayuda a diferenciar entre si ese tramo es silencio o si es una señal fricativa de baja energía ( /f o /s).
 
 
 ### Desarrollo del detector de actividad vocal
@@ -158,13 +162,17 @@ Ejercicios
   tiempo real tan exacto como sea posible. Tome como objetivo la maximización de la puntuación-F `TOTAL`.
 
 - Inserte una gráfica en la que se vea con claridad la señal temporal, el etiquetado manual y la detección
-  automática conseguida para el fichero grabado al efecto. 
+  automática conseguida para el fichero grabado al efecto.
+  ![image](https://github.com/user-attachments/assets/8c06e7f8-85af-4b2d-af4b-b626e36daa4d)
 
-- Explique, si existen. las discrepancias entre el etiquetado manual y la detección automática.
+
+- Explique, si existen. las discrepancias entre el etiquetado manual y la detección automática.  
+  Los sonidos sordos pueden confundirse con silencio y se observa cierto retardo en el etiquetado automático.
 
 - Evalúe los resultados sobre la base de datos `db.v4` con el script `vad_evaluation.pl` e inserte a 
   continuación las tasas de sensibilidad (*recall*) y precisión para el conjunto de la base de datos (sólo
   el resumen).
+  ![image](https://github.com/user-attachments/assets/f88c928f-e2b7-45d7-9288-97115b13bd77)
 
 
 ### Trabajos de ampliación
@@ -179,6 +187,7 @@ Ejercicios
 
 - Si ha usado `docopt_c` para realizar la gestión de las opciones y argumentos del programa `vad`, inserte
   una captura de pantalla en la que se vea el mensaje de ayuda del programa.
+![image](https://github.com/user-attachments/assets/8581a325-cdad-46be-a994-3c1cbc00bfdb)
 
 
 ### Contribuciones adicionales y/o comentarios acerca de la práctica
